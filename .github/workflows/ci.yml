@@ -9,4 +9,8 @@ jobs:
       run: | 
         echo "Repo has clonned"
         ls -la
-        test -f index && echo echo "Index.html exists"
+        if [ -f index.html ]; then
+          echo "index.hyml has exist"
+        else
+          exist 1
+        fi
